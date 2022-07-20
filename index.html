@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>小李's blog</title>
+  <link rel="icon" href="https://www.linux98.com/static/logo/favicon.ico" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/docsify/4/lib/themes/vue.css">
+  <!-- gitalk评论 -->
+  <link rel="stylesheet" href="/docsify/4/gitalk.css">
+
+</head>
+
+<body>
+  <nav>
+    <a href="#/README.md">Home</a>
+    <a href="#/About.md">About</a>
+  </nav>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '小李的博客', // 文档标题，会显示在侧边栏顶部
+      logo: 'https://www.linux98.com/static/logo/logo.png', // 在侧边栏中出现的网站图标，你可以使用CSS来更改大小
+      repo: 'https://github.com/cplinux/', // 配置仓库地址或者 username/repo 的字符串，会在页面右上角渲染一个 GitHub Corner 挂件。
+      coverpage: true, // 启用封面页，加载_coverpage.md
+      onlyCover: false, // 只在访问主页时加载封面
+      subMaxLevel: 3, // 自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
+      loadNavbar: false, // 加载自定义导航栏 _navbar.md
+      loadSidebar: true, // 加载自定义侧边栏 _sidebar.md
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+      tabs: { // 在markdown中使用tabs组件
+        persist: true,      // default
+        sync: true,      // default
+        theme: 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+      auto2top: true, // 切换页面后是否自动跳转到页面顶部
+      // relativePath: true, // 启用相对路径
+      relativePath: false, // 禁用相对路径（默认值）
+      autoHeader: false, // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
+      // routerMode: 'history', // 路由模式
+      notFoundPage: 'my404.md', // 指定自定义404页面
+      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
+      formatUpdated: '{MM}/{DD} {HH}:{mm}', // 可以通过 {docsify-updated} 变量显示文档更新日期. 并且通过 formatUpdated配置日期格式
+      search: 'auto' // 搜索相关
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify@4"></script> -->
+  <script src="/docsify/4/docsify@4"></script>
+
+
+  <!-- other settings -->
+  <!-- copy按钮 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script> -->
+  <script src="/docsify/4/docsify-copy-code.min.js"></script>
+  <!-- 搜索相关 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
+  <script src="/docsify/4/search.min.js"></script>
+  <!-- 页尾提示上下页 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
+  <script src="/docsify/4/docsify-pagination.min.js"></script>
+  <!-- 字数统计 -->
+  <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
+  <script src="/docsify/4/countable.js"></script>
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> -->
+  <script src="/docsify/4/docsify-tabs@1"></script>
+  <!-- 代码高亮相关 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script> -->
+  <script src="/docsify/4/prism-json.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script> -->
+  <script src="/docsify/4/prism-bash.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script> -->
+  <script src="/docsify/4/prism-yaml.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script> -->
+  <script src="/docsify/4/prism-python.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script> -->
+  <script src="/docsify/4/prism-javascript.min.js"></script>
+
+  <!-- disqus评论系统 -->
+  <!-- <script>
+    window.$docsify = {
+      disqus: 'linux98-com'
+    }
+  </script>
+  <script src="/docsify/4/disqus.min.js"></script> -->
+
+  <!-- gitalk 评论系统 -->
+
+  <script src="/docsify/4/docsify-gitalk.min.js"></script>
+  <script src="/docsify/4/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: 'xxxx.com',
+      owner: '',
+      admin: [''],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
+
+</body>
+
+<style>
+  .tab-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(35%, -45%);
+    padding: 0.25em 0.35em;
+    border-radius: 3px;
+    background: red;
+    color: white;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+  }
+</style>
+
+
+</html>
